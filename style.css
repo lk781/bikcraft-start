@@ -2,21 +2,23 @@
   --background-body: #f7f7f7;
   --background-content: #fff;
   --cor-principal: #000;
-  --cor-botao: #e21;
-  --cor-botao-hover: #900;
+  --cor-primaria: #e21;
+  --cor-primaria-escura: #900;
   --subtitulo: #c6c6c6;
+  --onda: url("./img/onda-clara.svg");
 }
 
+:root {
+  --background-body: #111;
+  --background-content: #000;
+  --vantagens-cor: #f7f7f721;
+  --cor-principal: #fff;
+  --cor-primaria: #e21;
+  --cor-primaria-escura: #900;
+  --subtitulo: rgba(255, 255, 255, 0.2);
+  --onda: url("./img/onda-escura.svg");
+}
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background-body: gray;
-    --background-content: #000;
-    --vantagens-cor: #f7f7f721;
-    --cor-principal: #fff;
-    --cor-botao: #e21;
-    --cor-botao-hover: #900;
-    --subtitulo: #c6c6c6;
-  }
 }
 
 body {
@@ -27,6 +29,7 @@ body {
   justify-items: center;
   margin-top: 60px;
   background-color: var(--background-body);
+  color: var(--cor-principal);
 }
 
 img {
@@ -83,7 +86,7 @@ p {
 }
 
 .menu a:hover {
-  border-color: var(--cor-botao);
+  border-color: var(--cor-primaria);
 }
 
 .conteudo {
@@ -101,7 +104,6 @@ p {
   gap: 20px;
   align-content: center;
   justify-items: end;
-  color: var(--cor-principal);
 }
 
 .introducao h1 {
@@ -112,14 +114,14 @@ p {
   content: "";
   width: 60px;
   height: 4px;
-  background: var(--cor-botao);
+  background: var(--cor-primaria);
   position: absolute;
   top: 30px;
   right: -30px;
 }
 
 .botao {
-  background: var(--cor-botao);
+  background: var(--cor-primaria);
   color: #fff;
   padding: 1rem 2rem;
   border-radius: 4px;
@@ -127,7 +129,7 @@ p {
 }
 
 .botao:hover {
-  background: var(--cor-botao-hover);
+  background: var(--cor-primaria-escura);
 }
 
 @media (max-width: 600px) {
@@ -154,7 +156,7 @@ p {
   text-align: right;
   padding: 40px;
   align-self: center;
-  background-image: var(--background-body) url("./img/onda.svg");
+  background-image: var(--onda);
 }
 
 .vantagens {
@@ -183,11 +185,11 @@ p {
 }
 
 .vantagens-item:nth-child(odd) {
-  background: var(--vantagens-cor);
+  background: var(--background-body);
 }
 
 .vantagens-item:hover {
-  border-color: #e21;
+  border-color: var(--cor-primaria);
 }
 
 .vantagens-item p {
